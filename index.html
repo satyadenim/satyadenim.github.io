@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Satya Denim — custom denim & jeans for men & women. Pick your wash & size, add to cart, order on WhatsApp." />
+  <title>Satya Denim</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header over-hero" id="siteHeader">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-logo" id="brandLogo">S</div>
+        <div>
+          <div class="brand-name" id="brandName">Satya Denim</div>
+          <div class="brand-tag" id="brandTag">Custom Denim & Jeans • Men & Women</div>
+        </div>
+      </div>
+      <div class="header-actions">
+        <a class="nav-link" href="size-guide.html">📏 Size Guide</a>
+        <nav class="social-top" id="socialTop" aria-label="Social links"></nav>
+        <a class="btn-wa js-wa-general" href="#" target="_blank" rel="noopener"><span class="js-wa-icon"></span> <span>Chat</span></a>
+        <button class="btn-cart-head" id="headerCart" aria-label="Open cart">🛒 <span class="cart-count-pill" id="cartCount">0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <!-- Auto-rotating cascading background slideshow (filled by app.js). No overlay — crisp image. -->
+    <div class="hero-slides" id="heroSlides" aria-hidden="true"></div>
+
+    <!-- Auto-rotating Offers widget (no click) on the RIGHT -->
+    <div class="offer-widget" id="offerWidget" aria-label="Exclusive offers">
+      <span class="offer-fire">🔥</span>
+      <span class="offer-badge-label" id="offerTitle">Exclusive Offers</span>
+      <span class="offer-ticker" id="offerTicker"></span>
+    </div>
+
+    <div class="container hero-content">
+      <!-- Localized readability "plate" behind the text only (keeps image crisp elsewhere) -->
+      <div class="hero-copy">
+        <h1 id="heroTitle">Style that <span class="hi-bounce">fits</span> <span class="hi-gold">you</span></h1>
+        <p id="heroText">Custom denim &amp; jeans for men &amp; women. Pick your wash &amp; size, add to cart, order on WhatsApp.</p>
+      </div>
+
+      <!-- 3 hero action buttons -->
+      <div class="hero-actions">
+        <button class="hero-btn hero-btn-new" id="btnNew">
+          <span class="hb-anim hb-new"></span>
+          <span class="hb-text">New Arrivals</span>
+        </button>
+        <button class="hero-btn hero-btn-men" id="btnMen">
+          <span class="hb-anim hb-mustache">〰</span>
+          <span class="hb-text">Shop Men's</span>
+        </button>
+        <button class="hero-btn hero-btn-women" id="btnWomen">
+          <span class="hb-anim hb-nosering">◗</span>
+          <span class="hb-text">Shop Women's</span>
+        </button>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true"><span></span></div>
+  </section>
+
+  <section class="section" id="catalog">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="shopLabel">✨ New Arrivals</h2>
+        <p>Tap a style to choose wash, size or a custom tailored fit.</p>
+      </div>
+      <div class="filters" id="filters"></div>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3 id="footBrand">Satya Denim</h3>
+        <p>Quality custom denim & jeans for men & women, tailored to your perfect fit.</p>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <div class="footer-row">📞 <a id="footPhone" href="#">+256 700 000 000</a></div>
+        <div class="footer-row">📍 <span id="footLocation">Kampala, Uganda</span></div>
+        <div class="footer-row">🕒 <span id="footHours">Mon–Sat: 8AM – 7PM</span></div>
+      </div>
+      <div>
+        <h3>Links</h3>
+        <div class="footer-row">📏 <a href="size-guide.html">Size Guide</a></div>
+        <div class="footer-row">💬 <a class="js-wa-general" href="#" target="_blank" rel="noopener">WhatsApp us</a></div>
+        <div class="footer-follow">Follow us</div>
+        <div class="footer-socials" id="footSocials"></div>
+      </div>
+    </div>
+    <div class="container footer-bottom">© <span id="footYear">2026</span> <span>Satya Denim</span>. All rights reserved.</div>
+  </footer>
+
+  <a class="fab-wa js-wa-general" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><span class="js-wa-icon"></span></a>
+  <button class="fab-cart" id="fabCart" aria-label="Open cart">🛒<span class="fab-count" id="fabCartCount">0</span></button>
+
+  <div class="overlay" id="overlay"></div>
+
+  <div class="pd-modal" id="pdModal" aria-label="Product options">
+    <button class="pd-close" id="pdClose" aria-label="Close">&times;</button>
+    <div class="pd-inner">
+      <div class="pd-media"><img id="pdImg" src="" alt="" /></div>
+      <div class="pd-content">
+        <span class="pd-meta" id="pdMeta"></span>
+        <h3 class="pd-name" id="pdName"></h3>
+        <div class="pd-price" id="pdPrice"></div>
+        <div id="pdOptions"></div>
+        <button class="btn-wa pd-add" id="pdAddBtn">🛒 Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="cart-head"><h3>Your Order</h3><button class="cart-close" id="cartClose" aria-label="Close">&times;</button></div>
+    <div class="cart-body" id="cartBody"></div>
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-total-row"><span>Estimated total</span><strong id="cartTotal">UGX 0</strong></div>
+      <p class="cart-note">Final price confirmed on WhatsApp (+ tailoring & measurements).</p>
+      <a class="btn-wa cart-send" id="cartSendBtn" href="#" target="_blank" rel="noopener"><span class="js-wa-icon"></span> Send Order on WhatsApp</a>
+      <button class="cart-clear" id="cartClearBtn">Clear cart</button>
+    </div>
+  </aside>
+
+  <script src="config.js"></script>
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Satya Denim — Size Guide for Men & Women. Jeans and tops measurements." />
+  <title>Size Guide — Satya Denim</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header scrolled" id="siteHeader">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-logo" id="brandLogo">S</div>
+        <div>
+          <div class="brand-name" id="brandName">Satya Denim</div>
+          <div class="brand-tag" id="brandTag">Custom Denim & Jeans • Men & Women</div>
+        </div>
+      </div>
+      <div class="header-actions">
+        <a class="nav-link" href="index.html">← Back to Catalog</a>
+        <nav class="social-top" id="socialTop" aria-label="Social links"></nav>
+        <a class="btn-wa js-wa-general" href="#" target="_blank" rel="noopener"><span class="js-wa-icon"></span> <span>Chat</span></a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero hero-sm">
+    <div class="denim-anim" aria-hidden="true"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Size <span>Guide</span></h1>
+      <p>Find your fit for jeans and tops. All measurements in inches. Prefer an exact fit? We do <b>custom tailoring</b> — just tell us on WhatsApp.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container-narrow">
+      <div class="tabs" id="genderTabs">
+        <button class="tab active" data-gender="Men">👖 Men</button>
+        <button class="tab" data-gender="Women">👗 Women</button>
+      </div>
+      <div id="guideContent"></div>
+
+      <div class="measure-help">
+        <h3>📐 How to measure</h3>
+        <ul>
+          <li><b>Waist:</b> Around the narrowest part of your waist, comfortably snug.</li>
+          <li><b>Hip:</b> Around the fullest part of your hips.</li>
+          <li><b>Inseam / Length:</b> From the crotch seam down to the hem (jeans).</li>
+          <li><b>Chest / Bust:</b> Around the fullest part of your chest, under the arms.</li>
+          <li><b>Shoulder:</b> Across the back, seam to seam.</li>
+        </ul>
+        <div class="measure-cta">
+          <p>Between two sizes, or want it perfect? Choose <b>Custom measurements</b> on any style, or message us directly.</p>
+          <a class="btn-wa js-wa-general" href="#" target="_blank" rel="noopener"><span class="js-wa-icon"></span> Ask on WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Satya Denim</h3>
+        <p>Quality custom denim & jeans for men & women, tailored to your perfect fit.</p>
+      </div>
+      <div>
+        <h3>Links</h3>
+        <div class="footer-row">🧵 <a href="index.html">Back to Catalog</a></div>
+        <div class="footer-row">💬 <a class="js-wa-general" href="#" target="_blank" rel="noopener">WhatsApp us</a></div>
+        <div class="footer-follow">Follow us</div>
+        <div class="footer-socials" id="footSocials"></div>
+      </div>
+    </div>
+    <div class="container footer-bottom">© <span id="footYear">2026</span> Satya Denim. All rights reserved.</div>
+  </footer>
+
+  <script src="config.js"></script>
+  <script src="products.js"></script>
+  <script>
+    (function () {
+      var cfg = SITE_CONFIG;
+      if (cfg.cursor) {
+        var hs = cfg.cursorHotspot || "0 0";
+        document.documentElement.style.setProperty("--cursor", 'url("' + cfg.cursor + '") ' + hs + ", auto");
+        document.documentElement.style.setProperty("--cursor-pointer", 'url("' + cfg.cursor + '") ' + hs + ", pointer");
+      }
+      var clean = cfg.whatsappNumber.replace(/\D/g, "");
+      var WA = "https://wa.me/" + clean + "?text=" + encodeURIComponent("Hello " + cfg.brandName + " 👋, I need help choosing my size.");
+      var WA_ICON = '<svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:currentColor"><path d="M.06 24l1.68-6.13A11.87 11.87 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.82 11.82 0 0 1 8.42 3.49 11.79 11.79 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.68-1.45L.06 24zM6.6 20.13c1.68 1 3.28 1.6 5.4 1.6 5.46 0 9.9-4.44 9.9-9.9 0-5.46-4.44-9.9-9.9-9.9S2.1 6.47 2.1 11.93c0 2.24.66 3.92 1.76 5.63l-.99 3.62 3.73-.98z"/></svg>';
+      var SOCIAL_ICONS = {
+        whatsapp: WA_ICON,
+        instagram: '<svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.86s0 3.6-.07 4.86c-.05 1.17-.25 1.8-.41 2.23a3.7 3.7 0 0 1-.9 1.38 3.7 3.7 0 0 1-1.38.9c-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.9.07s-3.63 0-4.9-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.86c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.52.01-4.76.07-.9.04-1.38.19-1.7.32-.43.16-.73.36-1.05.68-.32.32-.52.62-.68 1.05-.13.32-.28.8-.32 1.7-.06 1.24-.07 1.6-.07 4.76s.01 3.52.07 4.76c.04.9.19 1.38.32 1.7.16.43.36.73.68 1.05.32.32.62.52 1.05.68.32.13.8.28 1.7.32 1.24.06 1.6.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.38-.19 1.7-.32.43-.16.73-.36 1.05-.68.32-.32.52-.62.68-1.05.13-.32.28-.8.32-1.7.06-1.24.07-1.6.07-4.76s-.01-3.52-.07-4.76c-.04-.9-.19-1.38-.32-1.7a2.8 2.8 0 0 0-.68-1.05 2.8 2.8 0 0 0-1.05-.68c-.32-.13-.8-.28-1.7-.32C15.52 4.01 15.15 4 12 4zm0 3.06A4.94 4.94 0 1 1 12 17a4.94 4.94 0 0 1 0-9.88zm0 1.8a3.14 3.14 0 1 0 0 6.28 3.14 3.14 0 0 0 0-6.28zM17.64 6.4a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3z"/></svg>',
+        facebook: '<svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>',
+        tiktok: '<svg viewBox="0 0 24 24"><path d="M16.6 5.82a4.28 4.28 0 0 1-1.05-2.82h-3.1v12.4a2.53 2.53 0 1 1-2.53-2.53c.26 0 .5.04.74.11V9.8a5.7 5.7 0 0 0-.74-.05 5.66 5.66 0 1 0 5.66 5.66V9.01a7.35 7.35 0 0 0 4.3 1.38V7.28a4.28 4.28 0 0 1-3.28-1.46z"/></svg>',
+        youtube: '<svg viewBox="0 0 24 24"><path d="M23.5 6.5a3 3 0 0 0-2.12-2.12C19.5 3.9 12 3.9 12 3.9s-7.5 0-9.38.48A3 3 0 0 0 .5 6.5C0 8.38 0 12 0 12s0 3.62.5 5.5a3 3 0 0 0 2.12 2.12C4.5 20.1 12 20.1 12 20.1s7.5 0 9.38-.48a3 3 0 0 0 2.12-2.12C24 15.62 24 12 24 12s0-3.62-.5-5.5zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>',
+        twitter: '<svg viewBox="0 0 24 24"><path d="M18.9 2.5h3.3l-7.2 8.24L23.5 21.5h-6.6l-5.18-6.77-5.92 6.77H2.5l7.7-8.8L2 2.5h6.77l4.68 6.19L18.9 2.5zm-1.16 17h1.83L7.34 4.4H5.38l12.36 15.1z"/></svg>'
+      };
+      function renderSocials(el) {
+        if (!el || !cfg.socials) return;
+        var order = ["whatsapp","instagram","facebook","tiktok","youtube","twitter"];
+        var labels = { whatsapp:"WhatsApp", instagram:"Instagram", facebook:"Facebook", tiktok:"TikTok", youtube:"YouTube", twitter:"X" };
+        var html = "";
+        order.forEach(function (key) {
+          var url = cfg.socials[key] || "";
+          if (!url) return;
+          html += '<a class="social-icon social-' + key + '" href="' + url + '" target="_blank" rel="noopener" aria-label="' + labels[key] + '" title="' + labels[key] + '">' + SOCIAL_ICONS[key] + '</a>';
+        });
+        el.innerHTML = html;
+      }
+
+      var slot = document.getElementById("brandLogo");
+      if (cfg.logo) slot.innerHTML = '<img src="' + cfg.logo + '" alt="' + cfg.brandName + '" onerror="this.parentNode.textContent=\'S\'">';
+      document.getElementById("brandName").textContent = cfg.brandName;
+      document.getElementById("brandTag").textContent = cfg.tagline;
+      document.getElementById("footYear").textContent = new Date().getFullYear();
+      Array.prototype.forEach.call(document.querySelectorAll(".js-wa-general"), function (el) { el.href = WA; });
+      Array.prototype.forEach.call(document.querySelectorAll(".js-wa-icon"), function (el) { el.innerHTML = WA_ICON; });
+      renderSocials(document.getElementById("socialTop"));
+      renderSocials(document.getElementById("footSocials"));
+
+      function table(section) {
+        var t = '<table class="size-table"><thead><tr>';
+        section.cols.forEach(function (c) { t += "<th>" + c + "</th>"; });
+        t += "</tr></thead><tbody>";
+        section.rows.forEach(function (r) { t += "<tr>" + r.map(function (v, i) { return (i === 0 ? "<th>" + v + "</th>" : "<td>" + v + "</td>"); }).join("") + "</tr>"; });
+        return t + "</tbody></table>";
+      }
+      function render(gender) {
+        var g = SIZE_GUIDE[gender];
+        document.getElementById("guideContent").innerHTML =
+          '<div class="guide-section"><h2>' + gender + " · Jeans</h2>" + table(g.jeans) + "</div>" +
+          '<div class="guide-section"><h2>' + gender + " · Shirts & Tops</h2>" + table(g.tops) + "</div>";
+      }
+      render("Men");
+      Array.prototype.forEach.call(document.querySelectorAll("#genderTabs .tab"), function (btn) {
+        btn.addEventListener("click", function () {
+          Array.prototype.forEach.call(document.querySelectorAll("#genderTabs .tab"), function (b) { b.classList.remove("active"); });
+          btn.classList.add("active"); render(btn.dataset.gender);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
