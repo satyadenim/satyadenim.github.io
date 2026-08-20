@@ -39,7 +39,7 @@ const SITE_CONFIG = {
   logo: "images/logo.png",
 
   // ---- Custom cursor (golden scissors). "" = normal pointer ----
-  cursor: "images/scissors-cursor.png",
+  cursor: "images/scissors-cursor1.png",
   cursorHotspot: "4 4",
 
   // ---- WhatsApp number (VERY IMPORTANT) ----
